@@ -16,14 +16,14 @@ var request = require('request');
 // Notice that the callback we pass into it meets the two conditions above
 // Uncomment the lines below and run the example with `node exercises/bare_minimum/callbackReview.js`
 
-fs.readFile(__dirname + '/../../README.md', 'utf8', function (err, content) {
-  console.log('Example from callbackReview.js')
-  if (err) { 
-    console.log('fs.readFile failed :(\n', err)
-  } else {
-    console.log('fs.readFile successfully completed :)\n', content)
-  }
-});
+// fs.readFile(__dirname + '/../../README.md', 'utf8', function (err, content) {
+//   console.log('Example from callbackReview.js')
+//   if (err) { 
+//     console.log('fs.readFile failed :(\n', err)
+//   } else {
+//     console.log('fs.readFile successfully completed :)\n', content)
+//   }
+// });
 
 
 /******************************************************************
@@ -54,7 +54,6 @@ var getStatusCode = function (url, callback) {
     if (err) {
       callback(err);
     } else {
-    console.log('body here!' , body);
     callback(err, response.statusCode, body);
     }
   });
